@@ -1,0 +1,8 @@
+main {
+    background-image: url(girl.jpg);
+    background-size: cover;
+}
+
+:root {
+    --plyr-control-spacing: 10px;
+}

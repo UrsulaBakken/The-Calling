@@ -24,4 +24,7 @@
         margin: .25in;
     }
 
+    div audio {
+        display: none;
+    }
 }

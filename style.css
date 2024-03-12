@@ -29,47 +29,67 @@ main {
 }
 
   
-   article figure p {
-      padding: 50px;
-      margin: 1em auto;
-      display: flexbox;
-      align-items: center;
-      justify-content: center;
-      color: #F6F8FF;
-      background-color: #01031ba8;
-  
-   }
 
-  main h1 {
-    color: #F6F8FF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    
-    filter: drop-shadow (16px 16px #B3ADFE);
-  }
+main h1 {
+  color: #F6F8FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  
+  filter: drop-shadow (16px 16px #B3ADFE);
 
-  main h3 {
-    color: #F6F8FF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -.5em;
+
+  animation: fadeIn;
+  animation-duration: .75s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+
+}
+
+main h3 {
+  color: #F6F8FF;
+  margin-top: -.5em;
+  padding: .5em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn;
+  animation-duration: .75s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   
-  }
-  
-  div audio {
-    display: block;
-    width: auto;
-    margin: 2em;
-    position: fixed;
-    top: 20px;
-  }
+}
+
+a h3:hover{
+color: #B3ADFE;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+article figure p {
+   padding: 50px;
+   margin: 1em auto;
+   display: flexbox;
+   align-items: center;
+   justify-content: center;
+   color: #F6F8FF;
+   background-color: #01031ba8;
+
+   animation: fadeIn;
+   animation-duration: .75s;
+   animation-delay: 2s;
+   animation-fill-mode: both;
+
+}
+
+
 
   :root {
-    --plyr-color-main: #B3ADFE;
-      --plyr-audio-controls-background: #f6f8ffe7;
+    --plyr-color-main: #9089f7;
+      --plyr-audio-controls-background: #fefff6bb;
       --plyr-audio-control-color: #01031B;
       --plyr-audio-control-color-hover: #01031B ;
       --plyr-audio-progress-buffered-background: #01031B;
@@ -80,6 +100,25 @@ main {
       --plyr-control-icon-size: 32px;
   }
 
+  @keyframes fadeIn{
+    0% {
+      opacity: 0;
+      transform: translateY(-5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown{
+    0%{
+      transform: translateY(-10rem);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
 
   @media  (max-width: 600px) {
   

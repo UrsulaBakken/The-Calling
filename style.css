@@ -98,6 +98,11 @@ article figure p {
       --plyr-tooltip-background: #B3ADFE;
       --plyr-tooltip-color: #01031B; 
       --plyr-control-icon-size: 32px;
+
+      animation: slideDown;
+      animation-duration: 1s;
+      animation-delay: 2s;
+      animation-fill-mode: both;
   }
 
   @keyframes fadeIn{

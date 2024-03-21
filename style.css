@@ -17,18 +17,21 @@ main {
 
 main p {
   font-family: "Poppins", sans-serif;
-  font-weight: 250;
+  font-weight: 400;
   font-style: normal;
   font-size: 1.25rem;
 }
 main {
-    background-image: url(meadow.png);
-    background-size: cover;
+  background-image: url(headerimg.jpg);
+ background-size: contain;
+ position: fixed;
+ resize: both;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+    /* background-size: cover;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
-
-  
 
 main h1 {
   color: #F6F8FF;
@@ -37,7 +40,7 @@ main h1 {
   align-items: center;
   padding: 1em;
   
-  filter: drop-shadow (16px 16px #B3ADFE);
+  filter: drop-shadow (16px 16px #F6F8FF);
 
 
   animation: fadeIn;
@@ -61,41 +64,62 @@ main h3 {
   
 }
 
+div {
+  animation: slideDown;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
 a h3:hover{
-color: #B3ADFE;
+color: #FFE090;
 }
 
 a:link{
   text-decoration: none;
 }
 
-article figure p {
+article {
    padding: 50px;
-   margin: 1em auto;
-   display: flexbox;
-   align-items: center;
-   justify-content: center;
-   color: #F6F8FF;
-   background-color: #01031ba8;
+   /* margin: 1em auto; */
+   /* display: flex; */
+   /* align-items: center;
+   justify-content: center; */
+  
+
+   display: flex;
+   gap: 1em;
+   flex-wrap: wrap;
+   /* justify-content: center; */
+
 
    animation: fadeIn;
    animation-duration: .75s;
    animation-delay: 2s;
    animation-fill-mode: both;
 
+  
+
 }
 
+article figure {
 
+  margin-top: 60px;
+  background: #fefff6bb;
+  color: #01031B;
+  padding: 1em;
+  margin: 0;
+}
 
   :root {
-    --plyr-color-main: #9089f7;
+    --plyr-color-main: #FFE090;
       --plyr-audio-controls-background: #fefff6bb;
       --plyr-audio-control-color: #01031B;
       --plyr-audio-control-color-hover: #01031B ;
-      --plyr-audio-progress-buffered-background: #01031B;
+      --plyr-audio-progress-buffered-background: #F8D0B0;
       --plyr-font-family: sans-serif;
       --plyr-font-size-time: 22px;
-      --plyr-tooltip-background: #B3ADFE;
+      --plyr-tooltip-background: #FFE090;
       --plyr-tooltip-color: #01031B; 
       --plyr-control-icon-size: 32px;
 
@@ -105,6 +129,8 @@ article figure p {
       animation-fill-mode: both;
   }
 
+
+  /* Animation Keyframs */
   @keyframes fadeIn{
     0% {
       opacity: 0;
@@ -124,6 +150,9 @@ article figure p {
       transform: translateY(0);
     }
   }
+
+
+  /* Media Queries */
 
   @media  (max-width: 600px) {
   
